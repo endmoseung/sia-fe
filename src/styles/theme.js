@@ -1,5 +1,6 @@
 const colors = {
-  MAIN_COLOR: "#EBEDF2",
+  MAIN_COLOR: "#FCFCFC",
+  LAYOUT_BORDER_COLOR: "#EBEDF2",
   ACTIVE_COLOR: "#D5D9E2",
   MAIN_FONT: "#141746",
   LABEL_COLOR: "#dde1f7",

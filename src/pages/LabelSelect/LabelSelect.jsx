@@ -10,7 +10,6 @@ const LabelSelect = () => {
 
   useEffect(() => {
     const escKeyModalClose = (e) => {
-      console.log(e.key);
       if (e.keyCode === 27 || e.keyCode === 8) {
         deleteThing();
       }
@@ -23,17 +22,13 @@ const LabelSelect = () => {
     const deleteLabel = createdLabel.filter((item) =>
       item.isClicked ? "" : item
     );
-    console.log(deleteLabel);
     setCreatedLabel(deleteLabel);
   };
 
-  const dragStartFunction = (e) => {
-    console.log("start", e);
-  };
+  const dragStartFunction = (e) => {};
 
   const dragEndFunction = (e, index) => {
     let copyCreatedLabel = Array.from(createdLabel);
-    console.log(copyCreatedLabel[index]);
     let changed = {
       ...copyCreatedLabel[index],
       left: e.clientX - createdLabel[index].width / 2, //커서한곳을 중간지점으로 이동시키기위해

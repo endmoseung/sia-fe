@@ -5,8 +5,7 @@ import { ReactComponent as BoxCreate } from "../assets/Bounding_Box_Create.svg";
 import labelModeArray from "../constant/Constant";
 import { Outlet, useNavigate } from "react-router-dom";
 
-const Layout = (props) => {
-  console.log(props);
+const Layout = () => {
   const [labelMode, setLabelMode] = useState([
     { title: "select", active: true },
     { title: "create", active: false },
@@ -65,7 +64,7 @@ const Header = styled.header`
   font-size: ${({ theme }) => theme.fontSize.SEMI_M};
   background-color: ${({ theme }) => theme.colors.MAIN_COLOR};
   font-weight: 600;
-  border: 1px solid ${({ theme }) => theme.colors.MAIN_COLOR};
+  border: 1px solid ${({ theme }) => theme.colors.LAYOUT_BORDER_COLOR};
 `;
 
 const MainWrapper = styled.div`
@@ -80,7 +79,7 @@ const SideBar = styled.div`
   background-color: ${({ theme }) => theme.colors.MAIN_COLOR};
   display: flex;
   flex-direction: column;
-  border: 1px solid ${({ theme }) => theme.colors.MAIN_COLOR};
+  border: 1px solid ${({ theme }) => theme.colors.LAYOUT_BORDER_COLOR};
 `;
 
 const Main = styled.div`

@@ -12,7 +12,6 @@ const MainPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const numberEvent = Number(e.target[0].value);
-    console.log(numberEvent, e);
     if (!isNaN(numberEvent) && numberEvent > 0 && numberEvent <= 5000) {
       const photoData = async () => {
         const data = await getPhotos(numberEvent);

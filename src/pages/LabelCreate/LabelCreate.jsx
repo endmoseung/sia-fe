@@ -12,16 +12,13 @@ const LabelCreate = () => {
   const [createdLabel, setCreatedLabel] = useRecoilState(createdLabelArray);
   const currentPhoto = useRecoilValue(searchedPhoto);
 
-  console.log(createdLabel);
   useEffect(() => {
     const canvas = canvasRef.current;
-    console.log(canvas);
     setCtx(canvas?.getContext("2d"));
   }, []);
 
   function drawStart(e) {
     setIsDraw(true);
-    console.log(e.clientX, canvasRef.current?.offsetLeft);
     setPos([e.clientX, e.clientY]);
   }
 
@@ -45,7 +42,7 @@ const LabelCreate = () => {
   function drawSquare(e) {
     if (!isDraw) return;
   }
-  console.log(ctx);
+
   return (
     <Container>
       <ImgLayout src={currentPhoto}></ImgLayout>
