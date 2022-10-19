@@ -8,7 +8,7 @@
 
 ## 구현 영상
 
-https://user-images.githubusercontent.com/103626175/196707489-737c7998-09b8-415c-8375-f239a5de9077.mp4
+https://user-images.githubusercontent.com/103626175/196710529-bddb7fe9-0960-4913-a9b1-fe9c48c64789.mp4
 
 <br/>
 
