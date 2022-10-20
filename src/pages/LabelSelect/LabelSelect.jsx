@@ -10,7 +10,6 @@ const LabelSelect = () => {
 
   useEffect(() => {
     const escKeyModalClose = (e) => {
-      console.log(e.key);
       if (e.keyCode === 27 || e.keyCode === 8) {
         deleteThing();
       }
