@@ -5,17 +5,10 @@ import { createdLabelArray, searchedPhoto } from "../../recoil/store";
 import theme from "../../styles/theme";
 
 const LabelCreate = () => {
-  const canvasRef = useRef(null);
-  const [ctx, setCtx] = useState();
   const [isDraw, setIsDraw] = useState(false);
   const [pos, setPos] = useState([]);
   const [createdLabel, setCreatedLabel] = useRecoilState(createdLabelArray);
   const currentPhoto = useRecoilValue(searchedPhoto);
-
-  useEffect(() => {
-    const canvas = canvasRef.current;
-    setCtx(canvas?.getContext("2d"));
-  }, []);
 
   function drawStart(e) {
     setIsDraw(true);
@@ -28,7 +21,6 @@ const LabelCreate = () => {
     let currentY = e.clientY;
     const width = currentX - pos[0];
     const height = currentY - pos[1];
-    console.log(width, height);
 
     setCreatedLabel([
       ...createdLabel,
