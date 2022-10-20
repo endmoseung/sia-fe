@@ -26,13 +26,17 @@ const LabelCreate = () => {
     setIsDraw(false);
     let currentX = e.clientX;
     let currentY = e.clientY;
+    const width = currentX - pos[0];
+    const height = currentY - pos[1];
+    console.log(width, height);
+
     setCreatedLabel([
       ...createdLabel,
       {
-        left: pos[0],
-        top: pos[1],
-        width: currentX - pos[0],
-        height: currentY - pos[1],
+        left: width > 0 ? pos[0] : pos[0] + width,
+        top: height > 0 ? pos[1] : pos[1] + height,
+        width: width > 0 ? width : -width,
+        height: height > 0 ? height : -height,
         id: createdLabel.length,
         isClicked: false,
       },
