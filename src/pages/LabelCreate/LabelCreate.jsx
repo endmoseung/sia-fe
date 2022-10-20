@@ -58,8 +58,9 @@ const LabelCreate = () => {
         onMouseMove={drawSquare}
         onMouseUp={drawEnd}
       ></canvas>
-      {createdLabel?.map((item) => (
+      {createdLabel?.map((item, index) => (
         <div
+          key={index}
           style={{
             width: item.width,
             height: item.height,

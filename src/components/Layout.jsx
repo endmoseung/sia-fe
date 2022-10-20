@@ -93,10 +93,10 @@ const Selected = styled.div`
   margin-bottom: 8px;
   border-radius: 8px;
   background-color: ${(props) =>
-    props.labelMode.active ? "White" : "transparent"};
+    props.labelMode.active ? props.theme.colors.ACTIVE_COLOR : "transparent"};
   cursor: pointer;
   &:hover {
-    background-color: white;
+    background-color: ${({ theme }) => theme.colors.ACTIVE_COLOR};
   }
   transition: all 150ms ease-in;
 `;
